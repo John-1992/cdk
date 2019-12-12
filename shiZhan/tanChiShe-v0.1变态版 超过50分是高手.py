@@ -70,7 +70,7 @@ class Snake(threading.Thread):
 		self.direction = "Up"
 		self.points_earned = 0	#游戏分数
 		self.food = Food(self.queue)
-		self.snake_points = [(490,50),(480,50),(470,50),(460,50)]	#蛇身各点
+		self.snake_points = [(490,50),(480,50),(470,50),(460,50)]	# 蛇身各点
 		self.start()
 
 	def run(self):
@@ -82,18 +82,18 @@ class Snake(threading.Thread):
 			self._delete()
 		while not self.world.is_game_over:
 			self.queue.put({"move":self.snake_points})
-			if self.points_earned < 10:
-				time.sleep(0.4)
-			elif 10 <= self.points_earned < 15:
+			if self.points_earned < 5:
 				time.sleep(0.3)
-			elif 15 <= self.points_earned < 20:
+			elif 5 <= self.points_earned < 10:
 				time.sleep(0.2)
-			elif 20 <= self.points_earned < 25:
+			elif 10 <= self.points_earned < 15:
+				time.sleep(0.15)
+			elif 15 <= self.points_earned < 20:
 				time.sleep(0.1)	
-			elif 25 <= self.points_earned < 30:
+			elif 20 <= self.points_earned < 30:
 				time.sleep(0.05)
 			elif 30 <= self.points_earned < 40:
-				time.sleep(0.02)
+				time.sleep(0.03)
 			else :
 				time.sleep(0.01)
 			self.move()
@@ -154,16 +154,27 @@ class World(Tk):
 	'''
 	def __init__(self,queue):
 		Tk.__init__(self)
+		font1 = ('微软雅黑', 10, 'bold')
+		font2 = ('微软雅黑', 10, 'bold','underline')
 		self.queue = queue
 		self.is_game_over = False
 		#定义画板
-		self.canvas = Canvas(self,width = 500,height = 300,bg = 'gray')
+		self.canvas = Canvas(self,width = 500,height = 300,bg = '#a9dc76')
 		self.canvas.pack()
 
 		#画出蛇和食物
-		self.snake = self.canvas.create_line((0,0),(0,0),fill = 'black',width = 10)
-		self.food = self.canvas.create_rectangle(0,0,0,0,fill = '#FFCC4C',width = 10)
-		self.points_earned = self.canvas.create_text(450,20,fill = 'white',text = 'SCORE: 0')
+		self.snake = self.canvas.create_line((0,0),(0,0),fill='#ad80fe',width = 10,tags="snake")
+		self.food = self.canvas.create_rectangle(0,0,0,0,outline="#ad80fe",width = 10,tags="food")
+		self.points_earned = self.canvas.create_text(
+			450, 20, font=font2, fill='#ffd866', text='SCORE: 0', tags="points")
+
+		# 退出和重玩按钮
+		self.frame_button = Frame(width=500, height=40, bg='#a9dc76')
+		self.qb = Button(self.frame_button, text='Just Quit', width=30, bg="#33a3dc", fg="#c1c0B7",
+		                 activebackground="#ad80fe", activeforeground="#ff6188", font=font1, command=self.destroy)
+		self.rb = Button(self.frame_button, text='Try Again', width=30, bg="#33a3dc", fg="#c1c0B7",
+		                 activebackground="#ad80fe", activeforeground="#a9dc76", font=font1, command=self.again)
+
 		self.queue_handler()
 
 	def queue_handler(self):
@@ -187,18 +198,45 @@ class World(Tk):
 				#after的含义是，在多少毫秒后调用后面的函数
 				self.canvas.after(100,self.queue_handler)
 
+	def again(self):
+		# self.qb.pack_forget()
+		# self.rb.pack_forget()
+		self.frame_button.pack_forget()
+		# 清空画布
+		self.canvas.delete(ALL)
+		self.queue.queue.clear()
+		self.is_game_over = False
+		snake = Snake(self,self.queue)
+		self.canvas.pack()
+
+		# 按键绑定
+		self.bind('<Key-Left>',snake.key_pressed)
+		self.bind('<Key-Right>',snake.key_pressed)
+		self.bind('<Key-Up>',snake.key_pressed)
+		self.bind('<Key-Down>',snake.key_pressed)
+
+		#画出蛇和食物
+		self.snake = self.canvas.create_line((0,0),(0,0),fill = '#ad80fe',width = 10)
+		self.food = self.canvas.create_rectangle(0,0,0,0,outline = '#ad80fe',width = 10)
+		self.points_earned = self.canvas.create_text(450,20,font = ('微软雅黑', 10, 'bold','underline'),fill = '#ffd866',text = 'SCORE: 0')
+
+		self.queue_handler()
+
+
 	def game_over(self):
 		'''
 		游戏结束，清理现场
 		'''
 		self.is_game_over = True
-		self.canvas.create_text(250,150,fill = 'red',text = "Game Over")
-		qb = Button(self,text = 'Quit',command = self.destroy)
-		rb = Button(self,text = 'Again',command = self.__init__)
+		self.over = self.canvas.create_text(250,150,font = ('微软雅黑', 40, 'bold','italic'),fill = '#ff6188',text = "Game Over!!",tags="over")
+		self.frame_button.pack()
+		self.qb.grid(row=0,column=0)
+		self.rb.grid(row=0,column=1)
 
 if __name__ == "__main__":
 	q = queue.Queue()
 	world = World(q)
+	world.title("疯狂的贪吃蛇@_@    	[Press ↑ ↓ ← → to play the game.]")
 	snake = Snake(world,q)
 
 	world.bind('<Key-Left>',snake.key_pressed)
