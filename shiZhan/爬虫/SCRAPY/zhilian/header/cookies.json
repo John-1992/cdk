@@ -1,0 +1,269 @@
+[
+  {
+    "name": "x-zp-client-id",
+    "value": "43ea65f2-97bb-4aef-a281-fae48b5f4f20",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 4732525424
+  },
+  {
+    "name": "sajssdk_2015_cross_new_user",
+    "value": "1",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1578931199
+  },
+  {
+    "name": "at",
+    "value": "044c6fa341234e4382508494723c2121",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1579530232
+  },
+  {
+    "name": "rt",
+    "value": "b4db9239b29a432988f4046b34db17f2",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1579530232
+  },
+  {
+    "name": "acw_tc",
+    "value": "ac11000115789254324964127e012633ec7daeafbf9a7a2e617238cb20ce94",
+    "path": "/",
+    "domain": "i.zhaopin.com",
+    "secure": false,
+    "httpOnly": true,
+    "expiry": 1581603830
+  },
+  {
+    "name": "ZP-ENV-FLAG",
+    "value": "gray",
+    "path": "/",
+    "domain": "i.zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "sts_deviceid",
+    "value": "16f9f4a122a9-0a1ff410cb33fb-4c302a7b-1327104-16f9f4a122b48",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1894285429
+  },
+  {
+    "name": "sts_sg",
+    "value": "1",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "sts_chnlsid",
+    "value": "Unknown",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "zp_src_url",
+    "value": "https%3A%2F%2Fpassport.zhaopin.com%2Flogin",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "dywea",
+    "value": "95841923.2923629456588954600.1578925429.1578925429.1578925429.1",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1641997429
+  },
+  {
+    "name": "dywec",
+    "value": "95841923",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "dywez",
+    "value": "95841923.1578925429.1.1.dywecsr=passport.zhaopin.com|dyweccn=(referral)|dywecmd=referral|dywectr=undefined|dywecct=/login",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1594693429
+  },
+  {
+    "name": "dyweb",
+    "value": "95841923.1.10.1578925429",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1578927229
+  },
+  {
+    "name": "ZP_OLD_FLAG",
+    "value": "false",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1579184629
+  },
+  {
+    "name": "jobRiskWarning",
+    "value": "true",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "__utma",
+    "value": "269921210.210204968.1578925430.1578925430.1578925430.1",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1641997429
+  },
+  {
+    "name": "__utmc",
+    "value": "269921210",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "__utmz",
+    "value": "269921210.1578925430.1.1.utmcsr=passport.zhaopin.com|utmccn=(referral)|utmcmd=referral|utmcct=/login",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1594693429
+  },
+  {
+    "name": "__utmt",
+    "value": "1",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1578926029
+  },
+  {
+    "name": "__utmb",
+    "value": "269921210.1.10.1578925430",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1578927229
+  },
+  {
+    "name": "Hm_lvt_38ba284938d5eddca645bb5e02a02006",
+    "value": "1578925430",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1610461430
+  },
+  {
+    "name": "Hm_lpvt_38ba284938d5eddca645bb5e02a02006",
+    "value": "1578925430",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "sensorsdata2015jssdkcross",
+    "value": "%7B%22distinct_id%22%3A%22664439250%22%2C%22%24device_id%22%3A%2216f9f49f44d1a4-0a28863396fecb8-4c302a7b-1327104-16f9f49f44e198%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22first_id%22%3A%2216f9f49f44d1a4-0a28863396fecb8-4c302a7b-1327104-16f9f49f44e198%22%7D",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 7886125430
+  },
+  {
+    "name": "stayTimeCookie",
+    "value": "1578925430538",
+    "path": "/",
+    "domain": "i.zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "referrerUrl",
+    "value": "https%3A//i.zhaopin.com/",
+    "path": "/",
+    "domain": "i.zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "sts_evtseq",
+    "value": "2",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1578927230
+  },
+  {
+    "name": "sts_sid",
+    "value": "16f9f4a1232390-0f052468ca078b-4c302a7b-1327104-16f9f4a12344c2",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 1578927230
+  },
+  {
+    "name": "LastCity",
+    "value": "%E9%87%8D%E5%BA%86",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "LastCity%5Fid",
+    "value": "551",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false
+  },
+  {
+    "name": "privacyUpdateVersion",
+    "value": "3",
+    "path": "/",
+    "domain": ".zhaopin.com",
+    "secure": false,
+    "httpOnly": false,
+    "expiry": 4732525431
+  }
+]

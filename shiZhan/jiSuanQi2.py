@@ -92,7 +92,7 @@ button_ce.grid(row = 0,column = 3)
 num1 = ''
 num2 = ''
 operator = ''
-All = '' 
+All = ''
 
 def change(num):
 	'''
